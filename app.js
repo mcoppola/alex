@@ -81,7 +81,20 @@ var site = require('apostrophe-site')({
     stylesheets: ['site']
   },
 
-  // beforeEndAssets: function(callback) {
+    uploadfs: {
+        backend: 's3',
+        // Get your credentials at aws.amazon.com
+        secret: 'xxx',
+        key: 'xxx',
+        // You need to create your bucket first before using it here
+        // Go to aws.amazon.com
+        bucket: 'getyourownbucketplease',
+        // I recommend creating your buckets in a region with
+        // read-after-write consistency (not us-standard)
+        region: 'us-west-2'
+    }
+
+    // beforeEndAssets: function(callback) {
   //   // Apostrophe already loads these for logged-out users, but we
   //   // want them all the time in this project.
   //   site.apos.pushAsset('script', { name: 'vendor/blueimp-iframe-transport', when: 'always' });

@@ -1,0 +1,24 @@
+{% extends "layout_home.html" %}
+
+{% block bodyClass %}{{ super() }} home-page{% endblock %}
+
+{# breadcrumbs are excluded from the homepage #}
+{% block breadcrumbs %}
+{% endblock %}
+
+
+
+{% block mainContent %}
+        {% block main %}
+    <div class="one-column-area">
+        {{ aposArea({
+        slug: slug + ':main',
+        area: page.areas.main,
+        edit: edit,
+        controls: [ 'style', 'bold', 'italic', 'createLink', 'unlink', 'insertUnorderedList', 'slideshow' ],
+        slideshow: { noHeight: true, extraFields: true }
+        }) }}
+    </div>
+        {% endblock %}
+
+{% endblock %}

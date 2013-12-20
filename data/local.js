@@ -48,7 +48,7 @@ module.exports = {
   // If these are your db settings then you don't need to be explicit. If not
   // you can uncomment this and get more specific.
   db: {
-    uri: 'mongodb://admin:go8xmk64@sd059888.mongolab.com:59888/alex-gallery'
+    uri: 'mongodb://heroku_app20544327:go8xmk64@@ds061258.mongolab.com:61258/heroku_app20544327'
     // There is legacy support for host, port, name, user and password options,
     // but this is not necessary. They can all go in the uri option like this:
     // mongodb://user:password@host:port/dbname

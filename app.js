@@ -2,9 +2,9 @@ var site = require('apostrophe-site')({
 
   // This line is required and allows apostrophe-site to use require() and manage our NPM modules for us.
   root: module,
-  shortName: 'apostrophe-sandbox',
-  hostName: 'apostrophe-sandbox',
-  title: 'Apostrophe Sandbox',
+  shortName: 'alex-gallery',
+  hostName: 'alex-gallery',
+  title: 'Alex-Gallery',
   sessionSecret: 'apostrophe sandbox demo party',
   adminPassword: 'go8xmk64',
 
@@ -84,11 +84,11 @@ var site = require('apostrophe-site')({
     uploadfs: {
         backend: 's3',
         // Get your credentials at aws.amazon.com
-        secret: 'xxx',
-        key: 'xxx',
+        secret: 'dNjoZCzic023cmzLG8DfmclEpZ1bXDZXN9CaQog0',
+        key: 'AKIAJZ4TRVDFJZVZ4C3Q',
         // You need to create your bucket first before using it here
         // Go to aws.amazon.com
-        bucket: 'getyourownbucketplease',
+        bucket: 'alex-gallery',
         // I recommend creating your buckets in a region with
         // read-after-write consistency (not us-standard)
         region: 'us-west-2'

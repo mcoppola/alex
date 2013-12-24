@@ -13,7 +13,7 @@
 
 {% block header %}
   <div class="block header">
-    <div class="inner">
+      <div class="clearfix" style="margin-bottom: -20px">
 
       <div class="main-navigation">
         <a href="/" class="logo"></a>
@@ -77,34 +77,18 @@
 {# notice that this footer uses global areas: if we want editable content to appear on every page #}
 {# that inherits this one we want to use the global.areas object instead of the page.areas object. #}
 {% block footerBody %}
-  <footer class="footer">
+<footer class="footer">
     {% block footer %}
-    <div class="major block">
-      <div class="inner clearfix">
-        <div class="column">
-          {{ aposArea(global, 'footerContent1', { textOnly: true, controls: ['style', 'italic', 'createLink'] }) }}
+    <div class="minor block-footer">
+        <div class="inner clearfix">
+            <div class="column footer-text" style="margin-top: 8px">©ALEX COPPOLA</div>
+            <div class="footer-logos">
+                <a class="instagram-logo footer-logo" href="http://instagram.com"></a>
+                <a class="facebook-logo footer-logo" href="https://www.facebook.com/alexander.coppola.7?fref=ts"></a>
+            </div>
         </div>
-        <div class="column">
-          {{ aposArea(global, 'footerContent2', { textOnly: true, controls: ['style', 'italic', 'createLink'] }) }}
-        </div>
-        <div class="column">
-          {{ aposArea(global, 'footerContent3', { textOnly: true, controls: ['style', 'italic', 'createLink'] }) }}
-        </div>
-      </div>
-    </div>
-    <div class="minor block">
-      <div class="inner clearfix">
-        <div class="column footer-text">ALEX COPPOLA</div>
-        <div class="column">
-          <div class="footer-logos">
-            <a class="twitter-logo footer-logo" href="http://twitter.com/punkave"></a>
-            <a class="facebook-logo footer-logo" href="http://facebook.com/punkave"></a>
-          </div>
-        </div>
-        <div class="column footer-text right-align">COPYRIGHT &amp; PRIVACY POLICY</div>
-      </div>
     </div>
     {% endblock %}
-  </footer>
+</footer>
 {% endblock %}
 

@@ -76,14 +76,15 @@
         {{ calls }}
       });
 
-      var e = document.getElementById("img_fs");
 
       $('img.apos-slideshow-image').click(function() {
           if (RunPrefixMethod(document, "FullScreen") || RunPrefixMethod(document, "IsFullScreen")) {
               RunPrefixMethod(document, "CancelFullScreen");
           }
           else {
-              RunPrefixMethod(e, "RequestFullScreen");
+              e = document.getElementsByClassName("apos-slideshow-image");
+              console.log(e);
+              fullScreen(e[0]);
           }
       });
     var pfx = ["webkit", "moz", "ms", "o", ""];
@@ -106,6 +107,15 @@
         }
 
     }
+      function fullScreen(element) {
+          if(element.requestFullScreen) {
+              element.requestFullScreen();
+          } else if(element.webkitRequestFullScreen ) {
+              element.webkitRequestFullScreen();
+          } else if(element.mozRequestFullScreen) {
+              element.mozRequestFullScreen();
+          }
+      }
     </script>
   </body>
 </html>
